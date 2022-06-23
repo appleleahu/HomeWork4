@@ -73,8 +73,49 @@ public class Main {
             default:
                 System.out.println("Такого месяца не существует");
         }
-
-
+        // Task 6 - extra...
+        int age = 19;
+        int salary = 58_000;
+        if (age >= 23) {
+            System.out.println("Банка предоставит лимит в размере 3 зарплат: " + (salary * 3) + "рублей!");
+        } else if (age < 23) {
+            System.out.println("Банка предоставит лимит в размере 2 зарплат:" + (salary * 2) + "рублей!");
         }
+        if (salary >= 50_000) {
+            System.out.println("Мы готовы выдать вам кредитную карту с лимитом: " + (salary * 1.2) + "рублей!");
+        } else if (salary >= 80_000) {
+            System.out.println("Мы готовы выдать вам кредитную карту с лимитом: " + (salary * 1.5) + "рублей!");
+        }
+        // Task 7 - extra...
+        int age1 = 25;
+        int salary1 = 60_000;
+        int maxPayMonthly = salary1 / 2;
+        double percent = 10.0;
+        double multiplier = percent / (100 * 1.0);
+        int wantedSum = 330_000;
+        double clientNeedPayMonthly = wantedSum / percent;
+        if (age1 < 23) {
+            System.out.println(percent + 1);
+        } else if (age1 < 30 && age1 > 23) {
+            System.out.println(percent + 0.5);
+        }
+        if (salary1 > 80_000) {
+            System.out.println(percent - 0.7);
+        }
+        if (clientNeedPayMonthly > maxPayMonthly) {
+            System.out.println("Максимальный платеж при ЗП:" + salary1 + ",равен: " + maxPayMonthly + "рублей!");
+        } else if (clientNeedPayMonthly < maxPayMonthly) {
+            System.out.println("Платеж по кредиту " + wantedSum + " рублей. Одобрено!");
+        }
+        if (clientNeedPayMonthly > maxPayMonthly){
+            System.out.println("Платеж по кредиту " + wantedSum + " рублей. Отказано!");
+        }
+
+
+
+
+
+
+
 
     }
